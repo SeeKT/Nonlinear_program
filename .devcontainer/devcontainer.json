@@ -1,0 +1,18 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.177.0/containers/docker-existing-dockerfile
+{
+	// 名前は任意
+	"name": "Nonlinear_program",
+	// dockercomposefileの場所 (同階層に置いている)
+	"dockerComposeFile": "docker-compose.yml",
+	// 使う拡張機能
+	"extensions": [
+		"ms-python.python"
+	],
+	// ここに記載している"service"名とdocker-compose.ymlに記載している"service"を一致させる
+	"service": "python",
+	// コンテナ内に入ったときのworkdir
+	"workspaceFolder": "/home/user/code",
+	// VSCodeを閉じたときのアクション
+	"shutdownAction": "stopCompose"
+}

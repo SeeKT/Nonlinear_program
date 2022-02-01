@@ -1,0 +1,9 @@
+version: "3"
+services: 
+    python: # ここの名前とdevcontainer.jsonの"service"を一致させる
+        build: .    # 同階層のdockerfileからビルドする
+        command: sleep infinity
+        volumes: 
+            - ../:/home/user/code  # 上階層のディレクトリをDocker Container上のworkdirにマウント
+        environment: 
+            SHELL: /bin/bash
