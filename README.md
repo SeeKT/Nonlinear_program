@@ -3,16 +3,12 @@
 
 ただし，以下の tunnel-diode circuit model を例にする．
 
-$$
-\dot{x}_1 = 0.5 (-h(x_1) + x_2), \\
-\dot{x}_2 = 0.2(-x_1 - 1.5 x_2 + 1.2),
-$$
+![](./fig/tunnel-diode.png)
+
 
 ただし，
 
-$$
-h(x_1) = 17.76 x_1 - 103.79 x_1^2 + 229.62 x_1^3 - 226.31 x_1^4 + 83.72 x_1^5
-$$
+![](./fig/def_h.png)
 
 とする．
 以下のような位相図を描画するためのプログラムを作成した．
@@ -146,7 +142,7 @@ cbar.ax.set_xticklabels(['Low', 'High'])  # horizontal colorbar
 
 `dX_nrm, dY_nrm, ax.quiver` 以外は，カラーバーの描画のための操作である．
 (参考: [[matplotlib] 55. Colorbarの目盛りとそのラベルの設定](https://sabopy.com/py/matplotlib-55/))
-具体的な値よりも値の大小がどうかを見たかったので，ラベルを `Low` および `High` とした．
+具体的な値よりも値の大小がどうであるかを見たかったので，ラベルを `Low` および `High` とした．
 
 ```python
 ### plot stable manifold ###
